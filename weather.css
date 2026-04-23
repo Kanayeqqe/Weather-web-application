@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  font-family: -apple-system, Arial;
+  color: white;
+
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6)
+  );
+  z-index: 0;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 0.6s ease;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.search-bar button {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #ffffff33, #ffffff11);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  transform: scale(1.05);
+}
+
+/* история */
+.history {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+  padding: 10px;
+
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+}
+
+.history.active {
+  display: flex;
+}
+
+.history button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-align: left;
+}
+
+/* карточка */
+.current-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(25px);
+  padding: 25px;
+  border-radius: 22px;
+  margin-top: 20px;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.temp {
+  font-size: 70px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+#icon {
+  width: 80px;
+}
+
+#desc {
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.extra {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 8px;
+}
+
+canvas {
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.hourly {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.hour-card {
+  min-width: 80px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  transition: 0.25s;
+}
+
+.hour-card:hover {
+  transform: translateY(-6px);
+}
+
+.weekly {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 10px;
+}
+
+.day-card {
+  background: rgba(255,255,255,0.12);
+  padding: 10px;
+  border-radius: 12px;
+  transition: 0.25s;
+}
+
+.day-card:hover {
+  transform: translateY(-6px);
+}
+
+h2 {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+
+  .app {
+    padding: 14px;
+  }
+
+  .current-card {
+    padding: 18px;
+  }
+
+  .temp {
+    font-size: 52px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .weekly {
+    grid-template-columns: 1fr;
+  }
+
+  .extra {
+    grid-template-columns: 1fr;
+  }
+}
+
+

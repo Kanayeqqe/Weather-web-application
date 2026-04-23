@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- поиск -->
+  <div class="search-bar">
+    <input id="cityInput" placeholder="Введите город..." />
+    <button onclick="searchCity()">Поиск</button>
+
+    <div class="history" id="history"></div>
+  </div>
+
+  <div class="current-card">
+    <h1 id="city">Загрузка...</h1>
+
+    <img id="icon" />
+
+    <div class="temp" id="temp">--°C</div>
+    <div id="desc">---</div>
+
+    <div class="extra">
+      <span id="feels"></span>
+      <span id="wind"></span>
+      <span id="humidity"></span>
+      <span id="pressure"></span>
+      <span id="minmax"></span>
+      <span id="sun"></span>
+    </div>
+  </div>
+
+  <h2>Температура (24ч)</h2>
+  <canvas id="chart"></canvas>
+
+  <h2>Почасовой прогноз</h2>
+  <div class="hourly" id="hourly"></div>
+
+  <h2>7 дней</h2>
+  <div class="weekly" id="weekly"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="weather.js"></script>
+</body>
+</html>
