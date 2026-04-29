@@ -58,7 +58,6 @@ body::before {
   transform: scale(1.05);
 }
 
-/* история */
 .history {
   display: none;
   position: absolute;
@@ -90,7 +89,6 @@ body::before {
   text-align: left;
 }
 
-/* карточка */
 .current-card {
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(25px);
