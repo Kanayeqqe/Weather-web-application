@@ -50,6 +50,7 @@
 ---
 
 ## 📁 Структура проекта
+```
 weather-app/
 │
 ├── server.js          # backend (Express сервер)
@@ -58,16 +59,22 @@ weather-app/
 ├── weather.css        # стили
 ├── .env               # API ключ
 ├── package.json
-
+```
 ## установить зависимости
+```
 npm install
+```
 
 ## создать файл env.
+```
 API_KEY=
 PORT=3000
-
+```
 ## запуск сервера
+```
 node server.js
+```
 
-## открыть в браузере 
-http://localhost:3000/weather.html
+<img width="696" height="909" alt="image" src="https://github.com/user-attachments/assets/e6d436b4-2e24-44e1-aa9c-b84fbaecdabd" />
+<img width="294" height="1253" alt="image" src="https://github.com/user-attachments/assets/aa0daf55-a436-48cd-a5f0-cc47865eaa27" />
+
